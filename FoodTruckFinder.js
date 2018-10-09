@@ -15,7 +15,7 @@ let page = 1;
 
 /*
 This function makes an API request and uses the current time and date to filter the query.
-It then takes the result and pushes it into an array, and console logs the results.
+It then takes the result and pushes it into a table and logs the table.
 */
 function getFoodTrucks() {
   let day = new Date().getDay();
