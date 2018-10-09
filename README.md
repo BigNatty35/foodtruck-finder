@@ -1,6 +1,6 @@
 # Food Truck Finder
 Command line app that tells you what food trucks are available at that time of day.
-Example:
+
 ![alt text](./screenshots/foodtruckpic.png "Screen Shot")
 ## Basic Setup
 
