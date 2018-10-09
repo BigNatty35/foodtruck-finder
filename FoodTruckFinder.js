@@ -61,7 +61,7 @@ console.log(`Type ${colorText.done} or press ${colorText.ctrlC} to exit`);
 
 console.log("Hello, Welcome to FoodTruckFinder!".bold.red.bgWhite);
 directions();
-
+getFoodTrucks();
 /*
 This waits for user input.
 When a user types 'next' or 'n', it will make a request for the food trucks by calling the 'getFoodTrucks' function.
