@@ -9,9 +9,6 @@ const readLine = readline.createInterface({
   output: process.stdout
 });
 
-
-
-
 let offset = 0;
 let page = 1;
 
@@ -24,7 +21,7 @@ function getFoodTrucks() {
   let day = new Date().getDay();
   let time = new Date().getHours().toString() + ':00';
 
-  var table = new Table({ // Creates a new table with next page of trucks.
+  let table = new Table({ // Creates a new table with next page of trucks.
     head: [colorText.name, colorText.address]
   });
 
@@ -44,7 +41,7 @@ function getFoodTrucks() {
         console.log(table.toString());    
         page += 1;
       } else { 
-        // If there are no more trucks to display, close the rl.
+        // If there are no more trucks to display, close the program.
         console.log(colorText.noMore);
         console.log(colorText.goodBye); 
         readLine.close();
@@ -53,9 +50,8 @@ function getFoodTrucks() {
   );
 }
 
-
-// This function starts off the app with a greeting and directions on how to fetch data.
-function greetings() {
+// This function starts off the app with directions on how to fetch data.
+function directions() {
 console.log(`Type ${colorText.next} or ${colorText.n} for more trucks`);
 console.log(`Type ${colorText.done} or press ${colorText.ctrlC} to exit`);
 }
@@ -63,24 +59,21 @@ console.log(`Type ${colorText.done} or press ${colorText.ctrlC} to exit`);
 
 
 
-
-
+console.log("Hello, Welcome to FoodTruckFinder!".bold.red.bgWhite);
+directions();
 
 /*
-This function sends a prompt and waits for user input.
-When a user types next it will make a request for the food trucks by calling the 'getFoodTrucks' function.
+This waits for user input.
+When a user types 'next' or 'n', it will make a request for the food trucks by calling the 'getFoodTrucks' function.
 Once user types 'done' it closes the app.
 */
-
-console.log("Hello, Welcome to FoodTruckFinder!".bold.red.bgWhite);
-greetings();
-
 readLine.on('line', (input) => {
   if(input === 'done' || input === 'stop') {
+    console.log(colorText.goodBye); 
     readLine.close();
   } else {
     getFoodTrucks();
-    greetings();
+    directions();
   }
 });
 

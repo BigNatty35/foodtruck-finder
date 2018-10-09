@@ -1,7 +1,7 @@
-# foodtruck-finder
+# Food Truck Finder
 Command line app that tells you what food trucks are available at that time of day.
 
-# Basic Setup
+## Basic Setup
 
 ### Clone source locally:
 ```
