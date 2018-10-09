@@ -2,7 +2,7 @@
 Command line app that tells you what food trucks are available at that time of day.
 
 ![alt text](./screenshots/foodtruckpic.png "Screen Shot")
->>>>>>> f863b96c22b7d2d92f0ce204e4f0a2969b7fd66a
+
 ## Basic Setup
 
 ### Clone source locally:
