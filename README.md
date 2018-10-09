@@ -13,7 +13,7 @@ $ cd foodtruck-finder-master
 ### Install dependencies:
 
 ```
-$ npm install colors cli-table request
+$ npm install
 ```
 
 ### How to run application:
