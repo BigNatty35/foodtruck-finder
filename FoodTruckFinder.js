@@ -29,7 +29,6 @@ function getFoodTrucks() {
     `http://data.sfgov.org/resource/bbb8-hzi6.json?$order=applicant ASC&$where=(start24 <= '${time}' 
     AND end24 >= '${time}') AND dayorder = ${day}&$limit=10&$offset=${offset}`,
     function (error, response, body) {
-      let foodTrucks = [];
       let trucks = JSON.parse(response.body);
       offset += 10; // Increment the offset so it will grab the next 10 on the next request.
       
